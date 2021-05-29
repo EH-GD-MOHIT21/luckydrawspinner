@@ -1,0 +1,153 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50vh;
+}
+
+.circle {
+    position: absolute;
+    display: block;
+    width: 300px;
+    height: 50%;
+    background: red;
+    clip-path: circle(40%);
+    /* transform: rotate(90deg); */
+}
+
+.header:nth-child(1) {
+    position: absolute;
+    top: 68%;
+    left: 31%;
+    transform: translate(-50%, -50%) rotate(-43deg);
+}
+
+.header:nth-child(2) {
+    position: absolute;
+    top: 32%;
+    left: 31%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.header:nth-child(3) {
+    position: absolute;
+    top: 69%;
+    left: 71%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.header:nth-child(4) {
+    position: absolute;
+    top: 31%;
+    left: 69%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.header:nth-child(5) {
+    position: absolute;
+    top: 50%;
+    left: 22%;
+    transform: translate(-50%, -50%);
+}
+
+.header:nth-child(6) {
+    position: absolute;
+    top: 50%;
+    left: 78%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* up */
+
+.header:nth-child(7) {
+    position: absolute;
+    top: 22%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+
+/* down */
+
+.header:nth-child(8) {
+    position: absolute;
+    top: 78%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+.mainbtn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#centerbtn {
+    background: none;
+    border: none;
+    outline: none;
+    padding: 7px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 32px;
+}
+
+
+/* 
+@media(max-width: 800px) {
+    #mysel {
+        display: none;
+    }
+} */
+
+.line:nth-child(1) {
+    width: 230px;
+    height: 3px;
+    background: green;
+    color: green;
+    position: absolute;
+    transform: translate(-50%, -50%) rotate(23deg);
+}
+
+.line:nth-child(2) {
+    width: 230px;
+    height: 3px;
+    background: green;
+    color: green;
+    position: absolute;
+    transform: translate(-50%, -50%) rotate(66deg);
+}
+
+.line:nth-child(3) {
+    width: 230px;
+    height: 3px;
+    background: green;
+    color: green;
+    position: absolute;
+    transform: translate(-50%, -50%) rotate(109deg);
+}
+
+.line:nth-child(4) {
+    width: 230px;
+    height: 3px;
+    background: green;
+    color: green;
+    position: absolute;
+    transform: translate(-50%, -50%) rotate(156deg);
+}
+
+.inputtypes {
+    display: block;
+    width: 30%;
+    margin: auto;
+    margin-top: 30vh;
+    text-align: center;
+}

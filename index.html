@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="parent" id="par">
+        <div class="circle" id="animate">
+            <div class="header">Iphone</div>
+            <div class="header">Mishra</div>
+            <div class="header">Nested</div>
+            <div class="header">Patadhol</div>
+            <div class="header">Khamba</div>
+            <div class="header">chimkandi</div>
+            <div class="header">Bekar</div>
+            <div class="header">Bhad</div>
+        </div>
+        <div id="animate1">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="mainbtn" id="pbtn"><button id="centerbtn"><i class="fa fa-long-arrow-up"
+                    aria-hidden="true"></i></button></div>
+    </div>
+    <div class="inputtypes">
+        <select id="mysel" name="values">
+            <option value="0.5">speed 0.5</option>
+            <option value="0.25">speed 0.25</option>
+            <option value="0.75">speed 0.75</option>
+            <option value="1">speed 1</option>
+        </select>
+    </div>
+</body>
+
+<script>
+    cs = "stop";
+    flag = true;
+    crd = 1;
+    change = 0.5;
+
+    document.getElementById('centerbtn').addEventListener('click', function() {
+        if (cs == "stop") {
+            _id = setInterval(mohit, 10);
+            cs = "run";
+        } else {
+            clearInterval(_id);
+            cs = "stop";
+        }
+    });
+
+    function mohit() {
+        document.getElementById('animate').style.transform = "rotate(" + crd + "deg)";
+        document.getElementById('animate1').style.transform = "rotate(" + crd + "deg)";
+        crd += change;
+        if (crd >= 360) {
+            crd = 0;
+        }
+    }
+
+    document.getElementById("mysel").addEventListener('change', function() {
+        if (this.value == 0.25) {
+            change = 0.3;
+        } else if (this.value == 0.5) {
+            change = 0.75;
+        } else if (this.value == 0.75) {
+            change = 1;
+        } else {
+            change = 2;
+        }
+    })
+</script>
+
+</html>
