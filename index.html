@@ -48,13 +48,18 @@
     crd = 1;
     change = 0.5;
 
+
     document.getElementById('centerbtn').addEventListener('click', function() {
         if (cs == "stop") {
             _id = setInterval(mohit, 10);
             cs = "run";
         } else {
-            clearInterval(_id);
-            cs = "stop";
+            document.getElementById('centerbtn').style.pointerEvents = "none";
+            punikaptalish = Math.floor(Math.random() * 7000);
+            if (punikaptalish < 2000) {
+                punikaptalish = 2000;
+            }
+            __id__ = setInterval(satija, punikaptalish);
         }
     });
 
@@ -78,6 +83,37 @@
             change = 2;
         }
     })
+
+    function satija() {
+        clearInterval(_id);
+        cs = "stop";
+        clearInterval(__id__);
+        winner = checkforprize();
+        document.getElementById('centerbtn').style.pointerEvents = "auto";
+        // console.log(winner);
+    }
+
+    function checkforprize() {
+        // These are approximate limits not accurate
+        if (crd <= 40) {
+            winner = "Bekar";
+        } else if (crd <= 80) {
+            winner = "Mishra";
+        } else if (crd <= 120) {
+            winner = "Khamba";
+        } else if (crd <= 160) {
+            winner = "Iphone";
+        } else if (crd <= 200) {
+            winner = "Bhad";
+        } else if (crd <= 240) {
+            winner = "Nested";
+        } else if (crd <= 280) {
+            winner = "Chimkandi";
+        } else {
+            winner = "PataDhol";
+        }
+        return winner;
+    }
 </script>
 
 </html>
